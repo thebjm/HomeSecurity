@@ -1,0 +1,65 @@
+{% extends 'layout.html'%}
+
+{% block body %}
+
+<script src="{{ url_for ('static', filename= 'js/jQuery1.7.1.js')}}"></script>
+
+ <p class="help-block text-danger"></p>
+ <p class="help-block text-danger"></p>
+  <section id="contact">
+    <h4 class="text-center text-uppercase text-secondary mb-0">List of Visitors</h4>
+
+      <div class="container">
+          {% include 'includes/_messages.html' %}
+
+      <br>
+        <table class="table table-bordered table-responsive">
+          <tr>
+            <th></th>
+            <th>Name</th>
+            <th>Address</th>
+            <th>Visitor type</th>
+            <th>Phone</th>
+            <th>Entry Date & Time</th>
+            <th></th>
+
+          </tr>
+            {% for data in alldata:%}
+          <tr>
+            <td><img src="{{url_for ('static', filename = 'images/' +data.name+ '/' +data.photo )}}" alt="data.name"></td>
+            <td class="align-middle ">{{ data.name }}</td>
+            <td class="align-middle text-justify">{{ data.address }}</td>
+            <td class="align-middle">{{ data.typeofvisitor}}</td>
+            <td class="align-middle">{{ data.phone }}</td>
+            <td class="align-middle">{{ data.insert_time }} </td>
+
+
+
+            <td class="align-middle">
+              <form action="{{url_for('delete_member', id=data.id)}}" method="post">
+              <input type="hidden" name="_method" value="DELETE">
+              <button type="submit" class="btn btn-danger btn-sm" >
+              <span class="glyphicon glyphicon-trash"></span> </button>
+            </form> </td>
+          </tr>
+            {% endfor %}
+
+        </table>
+
+
+
+     </div>
+
+    </section>
+
+    <style>
+
+      img{
+        max-width:100px;
+        border-radius: 50%;
+      }
+
+    </style>
+
+
+{% endblock  %}

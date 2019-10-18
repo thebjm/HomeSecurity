@@ -1,0 +1,241 @@
+:root {
+  --input-padding-x: 1.5rem;
+  --input-padding-y: .75rem;
+}
+
+/* body {
+  background: #007bff;
+  background: linear-gradient(to right, #0062E6, ##cdf6f7);
+} */
+
+.card-signin {
+  border: 0;
+  border-radius: 1rem;
+  box-shadow: 0 0.5rem 1rem 0 rgba(0, 0, 0, 0.1);
+}
+
+.card-signin .card-title {
+  margin-bottom: 2rem;
+  font-weight: 300;
+  font-size: 1.5rem;
+}
+
+.card-signin .card-body {
+  padding: 2rem;
+}
+
+.form-signin {
+  width: 100%;
+}
+
+.form-signin .btn {
+  font-size: 80%;
+  border-radius: 5rem;
+  letter-spacing: .1rem;
+  font-weight: bold;
+  padding: 1rem;
+  transition: all 0.2s;
+}
+
+.form-label-group {
+  position: relative;
+  margin-bottom: 1rem;
+}
+
+.form-label-group input {
+  height: auto;
+  border-radius: 2rem;
+}
+
+.form-label-group>input,
+.form-label-group>label {
+  padding: var(--input-padding-y) var(--input-padding-x);
+}
+
+.form-label-group>label {
+  position: absolute;
+  top: 0;
+  left: 0;
+  display: block;
+  width: 100%;
+  margin-bottom: 0;
+  /* Override default `<label>` margin */
+  line-height: 1.5;
+  color: #495057;
+  border: 1px solid transparent;
+  border-radius: .25rem;
+  transition: all .1s ease-in-out;
+}
+
+
+
+
+
+/**************************************/
+
+
+.form-control{
+   height: 40px;
+   box-shadow: none;
+   color: #969fa4;
+ }
+ .form-control:focus{
+   border-color: #5cb85c;
+ }
+   .form-control, .btn{
+       border-radius: 3px;
+   }
+ .signup-form{
+   width: 400px;
+   margin: 0 auto;
+   padding: 30px 0;
+ }
+ .signup-form h2{
+   color: #636363;
+       margin: 0 0 15px;
+   position: relative;
+   text-align: center;
+   }
+ .signup-form h2:before, .signup-form h2:after{
+   content: "";
+   height: 2px;
+   width: 30%;
+   background: #d4d4d4;
+   position: absolute;
+   top: 50%;
+   z-index: 2;
+ }
+ .signup-form h2:before{
+   left: 0;
+ }
+ .signup-form h2:after{
+   right: 0;
+ }
+   .signup-form .hint-text{
+   color: #999;
+   margin-bottom: 30px;
+   text-align: center;
+ }
+   .signup-form form{
+   color: #999;
+   border-radius: 3px;
+     margin-bottom: 15px;
+       background: #f2f3f7;
+       box-shadow: 0px 2px 2px rgba(0, 0, 0, 0.3);
+       padding: 30px;
+   }
+ .signup-form .form-group{
+   margin-bottom: 20px;
+ }
+ .signup-form input[type="checkbox"]{
+   margin-top: 3px;
+ }
+ .signup-form .btn{
+       font-size: 16px;
+       font-weight: bold;
+   min-width: 140px;
+       outline: none !important;
+   }
+ .signup-form .row div:first-child{
+   padding-right: 10px;
+ }
+ .signup-form .row div:last-child{
+   padding-left: 10px;
+ }
+   .signup-form a{
+   color: #fff;
+   text-decoration: underline;
+ }
+   .signup-form a:hover{
+   text-decoration: none;
+ }
+ .signup-form form a{
+   color: #5cb85c;
+   text-decoration: none;
+ }
+ .signup-form form a:hover{
+   text-decoration: underline;
+ }
+
+
+/* ******************************************** */
+
+/* The Modal (background) */
+.modal {
+  display: none; /* Hidden by default */
+  position: fixed; /* Stay in place */
+  z-index: 1; /* Sit on top */
+  left: 0;
+  top: 0;
+  width: 100%; /* Full width */
+  height: 100%; /* Full height */
+  overflow: auto; /* Enable scroll if needed */
+  background-color: rgb(0,0,0); /* Fallback color */
+  background-color: rgba(0,0,0,0.4); /* Black w/ opacity */
+  -webkit-animation-name: fadeIn; /* Fade in the background */
+  -webkit-animation-duration: 0.4s;
+  animation-name: fadeIn;
+  animation-duration: 0.4s
+}
+
+/* Modal Content */
+.modal-content {
+  position: fixed;
+  bottom: 0;
+  background-color: #fefefe;
+  width: 100%;
+  -webkit-animation-name: slideIn;
+  -webkit-animation-duration: 0.4s;
+  animation-name: slideIn;
+  animation-duration: 0.4s
+}
+
+/* The Close Button */
+.close {
+  color: white;
+  float: right;
+  font-size: 28px;
+  font-weight: bold;
+}
+
+.close:hover,
+.close:focus {
+  color: #000;
+  text-decoration: none;
+  cursor: pointer;
+}
+
+.modal-header {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+.modal-body {padding: 2px 16px;}
+
+.modal-footer {
+  padding: 2px 16px;
+  background-color: #5cb85c;
+  color: white;
+}
+
+/* Add Animation */
+@-webkit-keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@keyframes slideIn {
+  from {bottom: -300px; opacity: 0}
+  to {bottom: 0; opacity: 1}
+}
+
+@-webkit-keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}
+
+@keyframes fadeIn {
+  from {opacity: 0}
+  to {opacity: 1}
+}

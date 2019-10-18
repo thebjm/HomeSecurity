@@ -1,0 +1,38 @@
+
+
+
+{% extends 'layout.html'%}
+{% from 'includes/_formhelpers.html' import render_field %}
+{% block body %}
+  <div class="container">
+    <div class="row">
+      <div class="col-sm-9 col-md-7 col-lg-5 mx-auto">
+        <div class="card card-signin my-5">
+          <div class="card-body">
+            <h5 class="card-title text-center">Sign In</h5>
+
+            <form id="login-form" class="form-signin" action="" method="POST">
+              <div class="form-label-group">
+                {{ render_field(form.username, placeholder= form.username.label.text )}}
+              </div>
+
+              <div class="form-label-group">
+                {{ render_field(form.password, placeholder= form.password.label.text )}}
+              </div>
+
+
+              <button  type="submit" class="btn btn-lg btn-primary btn-block text-uppercase"> Sign in </button>
+              <hr class="my-4">
+              <div id="register-link" class="text-right">
+              <a href="/register" class="text-info">Register here</a>
+              </div>
+              </form>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+
+
+
+{% endblock%}
